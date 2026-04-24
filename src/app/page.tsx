@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
@@ -12,6 +11,7 @@ import {
   Layers,
   ChevronRight,
 } from "lucide-react";
+import Image from "next/image";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -191,7 +191,12 @@ export default function Portfolio() {
               <div className="absolute inset-0 bg-linear-to-br from-indigo-500 to-cyan-500 rounded-full blur-2xl opacity-20 animate-pulse" />
               <div className="relative z-10 w-full h-full rounded-full overflow-hidden glass p-2 border-2 border-indigo-500/20">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
-                  <img src="/images/profile.png" alt="Lennin Lara" />
+                  <Image
+                    src="/images/profile.png"
+                    alt="Lennin Lara"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
