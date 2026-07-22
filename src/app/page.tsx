@@ -192,7 +192,7 @@ export default function Portfolio() {
               <div className="relative z-10 w-full h-full rounded-full overflow-hidden glass p-2 border-2 border-indigo-500/20">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
                   <Image
-                    src="/images/profile.png"
+                    src="https://raw.githubusercontent.com/lenninlara28/personal-landing-page/main/public/images/profile.png"
                     alt="Lennin Lara"
                     fill
                     className="object-cover"
