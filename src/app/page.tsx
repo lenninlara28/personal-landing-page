@@ -31,6 +31,8 @@ export default function Portfolio() {
     "JavaScript",
     "TypeScript",
     "Next.js",
+    ".NET",
+    "C#",
     "Java",
     "Python",
     "SQL",
@@ -38,29 +40,61 @@ export default function Portfolio() {
     "PostgreSQL",
     "AWS",
     "Azure",
+    "Google Cloud (GCP)",
+    "Automatizaciones",
+    "Testing / QA",
     "Web3",
     "Blockchain",
     "Git/GitHub",
   ];
 
-  const experience = [
+  const projects = [
     {
-      company: "SBXCLOUD",
-      role: "Desarrollador Frontend",
-      period: "2025 - 2026",
-      desc: "Desarrollo de interfaces modernas y escalables.",
+      name: "Certika",
+      desc: "Desarrollo de soluciones Blockchain, Smart Contracts y arquitecturas Full Stack.",
+      tags: ["Blockchain", "Smart Contracts", "Full Stack"],
     },
     {
-      company: "InfoDesign Colombia",
-      role: "Desarrollador Frontend Senior",
-      period: "2023 - 2026",
-      desc: "Liderazgo técnico y arquitectura frontend.",
+      name: "CryptoCaribe",
+      desc: "Plataforma e infraestructura para ecosistemas Web3 y tecnologías cripto.",
+      tags: ["Web3", "Crypto", "DeFi"],
     },
     {
-      company: "Certika sas",
-      role: "Desarrollador FullStack Senior",
-      period: "2020 - 2023",
-      desc: "Desarrollo de soluciones Blockchain y arquitecturas FullStack.",
+      name: "InfoDesign Colombia",
+      desc: "Liderazgo técnico y desarrollo en proyectos internos de analítica, visión por computador y procesamiento en tiempo real.",
+      highlights: [
+        "Hardhat",
+        "Machine Vision",
+        "Graph en tiempo real",
+        "Análisis de madurez",
+      ],
+      tags: ["Hardhat", "Machine Vision", "Real-time Graph", "Analytics"],
+    },
+    {
+      name: "Sbxcloud",
+      desc: "Desarrollo de plataformas web integrando soluciones de comercio electrónico, sistemas corporativos e inteligencia artificial.",
+      highlights: ["E-commerce", "Integraciones SAP", "Inteligencia Artificial"],
+      tags: ["E-commerce", "SAP", "IA"],
+    },
+    {
+      name: "Sistemas de Gestión de Inventarios",
+      desc: "Proyecto personal enfocado en la administración, control de stock, movimiento de productos y reporte en tiempo real en .NET.",
+      tags: [".NET", "C#", "SQL Server", "Inventarios"],
+    },
+    {
+      name: "Entrenamiento de IA para Ventas",
+      desc: "Desarrollo y ajuste de modelos de Inteligencia Artificial aplicados a la optimización de procesos de venta y prospección comercial.",
+      tags: ["IA", "Machine Learning", "Ventas", "Prompt Engineering"],
+    },
+    {
+      name: "Automatizaciones de Procesos",
+      desc: "Implementación de flujos automatizados, scripts y herramientas para la optimización de tareas operativas y de integración.",
+      tags: ["Automatizaciones", "Workflows", "Integration", "Scripting"],
+    },
+    {
+      name: "Testeos y QA de Plataformas",
+      desc: "Pruebas integrales, validación funcional y aseguramiento de calidad de software para plataformas web complejas.",
+      tags: ["Testing", "QA", "Pruebas Funcionales", "Plataformas"],
     },
   ];
 
@@ -98,10 +132,10 @@ export default function Portfolio() {
               Habilidades
             </a>
             <a
-              href="#experience"
+              href="#projects"
               className="hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
             >
-              Experiencia
+              Proyectos
             </a>
             <a
               href="#contact"
@@ -130,7 +164,7 @@ export default function Portfolio() {
                 Full Stack Developer | Senior Frontend
               </span>
               <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-foreground">
-                Impulsando el futuro con
+                Impulsando el futuro con{" "}
                 <span className="text-gradient">Tecnología Web.</span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg lg:text-xl leading-relaxed max-w-2xl">
@@ -155,7 +189,7 @@ export default function Portfolio() {
                   },
                   {
                     icon: <MessageCircle size={20} />,
-                    href: "https://wa.me/573015699747", // Reemplaza con tu número de WhatsApp
+                    href: "https://wa.me/573015699747",
                   },
                   {
                     icon: <Link size={20} />,
@@ -210,7 +244,7 @@ export default function Portfolio() {
             {
               icon: <Code2 className="text-indigo-600 dark:text-indigo-400" />,
               title: "Full Stack Focus",
-              desc: "Dominio de React, Next.js, TypeScript, Java, Python, Api Rest, Node.js y ecosistemas modernos de JS.",
+              desc: "Dominio de React, Next.js, TypeScript, Java, Python, .NET, Api Rest, Node.js y ecosistemas modernos de JS.",
             },
             {
               icon: <Layers className="text-cyan-600 dark:text-cyan-400" />,
@@ -219,8 +253,8 @@ export default function Portfolio() {
             },
             {
               icon: <Cpu className="text-purple-600 dark:text-purple-400" />,
-              title: "Arquitectura Senior",
-              desc: "Diseño de sistemas escalables y mantenibles en AWS y Azure.",
+              title: "Arquitectura & Cloud",
+              desc: "Diseño de sistemas escalables y despliegues en infraestructura de AWS, Azure y Google Cloud (GCP).",
             },
           ].map((item, i) => (
             <motion.div
@@ -273,43 +307,59 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Experience Section */}
-        <section id="experience" className="space-y-12">
+        {/* Projects Section */}
+        <section id="projects" className="space-y-12">
           <div className="space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
-              Experiencia <span className="text-gradient">Laboral</span>
+              Proyectos en los que <span className="text-gradient">he trabajado</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400">
-              Trayectoria profesional en empresas líderes del sector
-              tecnológico.
+              Desarrollo de soluciones tecnológicas de alto impacto e innovación.
             </p>
           </div>
-          <div className="space-y-6">
-            {experience.map((exp, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((proj, i) => (
               <motion.div
                 key={i}
-                className="p-8 rounded-3xl glass border-l-4 border-l-indigo-500 flex flex-col md:flex-row justify-between gap-6"
+                className="p-8 rounded-3xl glass border border-indigo-500/20 hover:border-indigo-500/40 transition-all flex flex-col justify-between space-y-6 group"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={i}
                 variants={fadeIn}
               >
-                <div className="space-y-2">
-                  <span className="text-indigo-600 dark:text-indigo-400 text-sm font-bold uppercase tracking-widest">
-                    {exp.period}
-                  </span>
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {exp.role}
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-foreground group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
+                    {proj.name}
                   </h3>
-                  <h6 className="text-lg font-bold text-foreground">
-                    {exp.company}
-                  </h6>
-                </div>
-                <div className="max-w-md">
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {exp.desc}
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                    {proj.desc}
                   </p>
+                  {proj.highlights && (
+                    <div className="pt-2 space-y-2">
+                      <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
+                        Proyectos destacados / áreas:
+                      </span>
+                      <ul className="grid grid-cols-2 gap-2 text-xs text-slate-700 dark:text-slate-300">
+                        {proj.highlights.map((item, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-black/5 dark:border-white/5">
+                  {proj.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             ))}
