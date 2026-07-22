@@ -191,7 +191,7 @@ export default function Portfolio() {
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-linear-to-br from-indigo-500 to-cyan-500 rounded-full blur-2xl opacity-20 animate-pulse" />
               <div className="relative z-10 w-full h-full rounded-full overflow-hidden glass p-2 border-2 border-indigo-500/20">
-                <div className="w-full h-full rounded-full overflow-hidden relative">
+                <div className="w-full h-fit rounded-full overflow-hidden relative">
                   <Image
                     src={profilePic}
                     alt="Lennin Lara"
